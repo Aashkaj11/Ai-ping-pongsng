@@ -1,4 +1,5 @@
 
+
 /*created by prashant shukla */
 
 var paddle2 =10,paddle1=10;
@@ -20,9 +21,20 @@ var ball = {
     dx:3,
     dy:3
 }
+function preload() {
+	world_start = loadSound("world_start.wav");
+	setSprites();
+	MarioAnimation();
+}
 
-function setup(){
-  var canvas =  createCanvas(700,600);
+function setup() {
+	canvas = createCanvas(700,600);
+	canvas.parent('canvas');
+	instializeInSetup(mario);
+}
+
+function draw() {
+	game()
 }
 
 
